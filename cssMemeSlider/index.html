@@ -7,55 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="all">
-        <input checked type="radio" name="respond" id="desktop">
-        <article id="slider">
-            
-            <input checked type="radio" name="slider" id="switch1">
-            <input type="radio" name="slider" id="switch2">
-            <input type="radio" name="slider" id="switch3">
-            <input type="radio" name="slider" id="switch4">
-            <input type="radio" name="slider" id="switch5">
-
-            <div id="slides">
-                <div id="slides-wrapper">
-                    <div class="slider-image">
-                        <article>
-                            <img src="memsPhoto/mem1.jpg" alt="mem1">
-                        </article>
-                        <article>
-                            <img src="memsPhoto/mem2.jpg" alt="mem1">
-                        </article>
-                        <article>
-                            <img src="memsPhoto/mem3.jpg" alt="mem1">
-                        </article>
-                        <article>
-                            <img src="memsPhoto/mem4.jpg" alt="mem1">
-                        </article>
-                        <article>
-                            <img src="memsPhoto/mem5.jpg" alt="mem1">
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-            <div id="controls">
-                <label for="switch1"></label>
-                <label for="switch2"></label>
-                <label for="switch3"></label>
-                <label for="switch4"></label>
-                <label for="switch5"></label>
-            </div>
-
-            <div id="active">
-                <label for="switch1"></label>
-                <label for="switch2"></label>
-                <label for="switch3"></label>
-                <label for="switch4"></label>
-                <label for="switch5"></label>
-            </div>
-
-        </article>
+<div class="slider">
+    <div class="slider-wrapper">
+        <div class="slider-item slide1" >
+            <!-- <img src="memsPhoto/mem1.jpg" alt=""> -->
+        </div>
+        <div class="slider-item slide2" >
+            <!-- <img src="memsPhoto/mem2.jpg" alt=""> -->
+        </div>
+        <div class="slider-item slide3" >
+            <!-- <img src="memsPhoto/mem3.jpg" alt=""> -->
+        </div>
+        <div class="slider-item slide4" >
+            <!-- <img src="memsPhoto/mem4.jpg" alt=""> -->
+        </div>
+        <div class="slider-item slide5" >
+            <!-- <img src="memsPhoto/mem5.jpg" alt=""> -->
+        </div>
     </div>
+    <div class="slider-control">
+        <div class="slider-pagination">
+            <input type="radio" name="slide" id="s1">
+            <input type="radio" name="slide" id="s2">
+            <input type="radio" name="slide" id="s3">
+            <input type="radio" name="slide" id="s4">
+            <input type="radio" name="slide" id="s5">
+        </div>
+        <div class="slider-labels">
+            <label for="s1">Slide 1</label>
+            <label for="s2">Slide 2</label>
+            <label for="s3">Slide 3</label>
+            <label for="s4">Slide 4</label>
+            <label for="s5">Slide 5</label>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
