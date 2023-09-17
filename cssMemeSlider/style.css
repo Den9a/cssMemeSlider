@@ -23,30 +23,68 @@
     box-shadow: 0 .3rem .2rem #777575;
     display: flex;
     overflow: hidden;
-    
+    scroll-behavior: smooth;
 }
 
 .slider-item {
     min-width: 100%;
     min-height: 100%;
-    transition: transform 0.65s ease-out;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0); 
 }
 .slider-dot {
-    display: inline-block;
+    display: flex;
     width: 16px;
     height: 16px;
-    border: 1px solid hsl(0, 0%, 0%);
-    border-radius: 50%;
-    margin: .02em .02em .02em .02em;
+    outline: none;
+    outline-style: none;
 }
+
 
 .slider-dot:hover,
 .slider-dot:focus {
     background: lightslategray;
-    box-shadow: 0 .2rem .5rem #837777;
+    cursor: pointer;
 }
-a .slider-dot{
-    
+
+.slider-pagination:has(#s1:checked) ~ .slider-wrapper .slide1 {
+    transform: translateX(0%);
+}
+
+.slider-pagination:has(#s2:checked)  ~ .slider-wrapper .slide2 {
+    transform: translateX(-100%);
+}
+
+.slider-pagination:has(#s3:checked) ~ .slider-wrapper .slide3{
+    transform: translateX(-200%);
+}
+
+.slider-pagination:has(#s4:checked) ~ .slider-wrapper .slide4{
+    transform: translateX(-300%);
+}
+
+.slider-pagination:has(#s5:checked) ~ .slider-wrapper .slide5{
+    transform: translateX(-400%);
+}
+
+label{
+    display: none;
+}
+
+#s1:checked ~ label[for='s1']{
+    display: block;
+}
+#s2:checked ~ label[for='s2']{
+    display: block;
+}
+#s3:checked ~ label[for='s3']{
+    display: block;
+}
+#s4:checked ~ label[for='s4']{
+    display: block;
+}
+#s5:checked ~ label[for='s5']{
+    display: block;
 }
 
 
@@ -67,37 +105,24 @@ a .slider-dot{
 }
 
 
-.slider-control{
-    margin: 1.5rem;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .6rem;
-    border:2px solid #837777 ;
-    border-radius: 15px;
-    box-shadow: 0 .3rem .2rem #777575;
-    width: 48%;
-    min-height: 5%;
-    
-}
-
-
 .slider-pagination {
-    width: 200px;
-    height: 60px;
+    width: 48vw;
+    height: 10vh;
     order: 2;
     text-align: center;
     margin-top: 2.2rem;
-    
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border: 1px solid #777575;
+    border-radius: .5rem;
+    padding: 0 .5rem;
+    justify-content: flex-end;
 }
-.slider-pagination input[type="radio"]:hover,
-.slider-pagination input[type="radio"]:focus{
-    accent-color: #bbb;
-    cursor: pointer;
+.slider-pagination input:last-child{
+    margin-right: 25% ;
 }
-
-.slider-labels {
-    
+.slider-pagination label{
+    margin-right: 56%;
+    text-align: center;
 }
